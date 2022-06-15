@@ -1,6 +1,8 @@
 import './index.css';
 
 import App from './App';
+import AppRoutes from './AppRoutes';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
@@ -11,11 +13,13 @@ const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Provider store={store}>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  </Provider>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
