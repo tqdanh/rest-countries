@@ -8,12 +8,12 @@ class CountryService {
 
   constructor(){
     this.client = axios.create({
-      baseURL: config.countryBaseUrl
+      baseURL: config.API_BASE_URL
     });
   }
 
   async getAll(){
-    var response = await this.client.post<Country[]>("/all");
+    var response = await this.client.get<Country[]>("/all");
     return response.data;
   }
 }

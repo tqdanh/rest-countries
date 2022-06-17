@@ -17,7 +17,7 @@ export type Country = {
     root: string,
     suffixes: string[]
   },
-  capital: string[],
+  capital: string[] | undefined,
   altSpellings: string[],
   region: string,
   subregion: string,
