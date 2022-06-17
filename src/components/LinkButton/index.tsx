@@ -1,9 +1,9 @@
 import { Button, styled } from "@mui/material";
 import { Link, LinkProps } from "react-router-dom";
 
-import React from "react";
+import { ComponentProps } from "react";
 
-type PredefinedLinkButtonProps = Omit<React.ComponentProps<typeof Button>, "LinkComponent">;
+type PredefinedLinkButtonProps = Omit<ComponentProps<typeof Button>, "LinkComponent">;
 
 const PredefinedLinkButton = (props: PredefinedLinkButtonProps) => <Button LinkComponent={Link} {...props}></Button>
 

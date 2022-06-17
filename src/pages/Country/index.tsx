@@ -1,11 +1,9 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { getAsync, selectCountries, selectError, selectLoading } from "../../redux/features/country/countrySlice";
 import { useAppDispatch, useAppSelector } from "../../hooks";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import CountryService from "../../services/CountryService";
-import { Country as CountryType } from "../../types";
 import LinkButton from "../../components/LinkButton";
 import { useParams } from "react-router-dom";
 
