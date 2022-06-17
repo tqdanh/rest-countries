@@ -2,7 +2,7 @@ export type Country = {
   name: {
     common: string,
     official: string,
-    nativeName: { [id: string]: string }
+    nativeName: { [id: string]: { official: string, common: string } }
   },
   tld: string[],
   cca2: string,

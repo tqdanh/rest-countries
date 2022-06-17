@@ -23,8 +23,10 @@ function Countries() {
   );
 
   useEffect(() => {
-    dispatch(getAsync());
-  }, [dispatch]);
+    if(countries.length === 0 && !loading){
+      dispatch(getAsync());
+    }
+  }, []);
 
   return (
     <Box marginY={5}>

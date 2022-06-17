@@ -9,7 +9,7 @@ export default function AppRoutes() {
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Countries />} />
-        <Route path=":id" element={<Country />} />
+        <Route path="country/:name" element={<Country />} />
       </Route>
       <Route path="*"
         element={
